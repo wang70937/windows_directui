@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30D23855-4210-4190-A1F3-06A5D8C845BE}</ProjectGuid>
+    <RootNamespace>UIEngine</RootNamespace>
+    <Keyword>AtlProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Output\Debug\</OutDir>
+    <IntDir>..\Output\Temp\UIEngine\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Output\Release\</OutDir>
+    <IntDir>..\Output\Temp\Release\UIEngine\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)UIEngine.tlb</TypeLibraryName>
+      <HeaderFileName>UIEngine.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>UIEngine_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>UIEngine_p.c</ProxyFileName>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;_ATL_ATTRIBUTES;FUNCTION_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>..\Output\Debug\Common.lib;..\Output\Debug\wke.lib;msimg32.lib;Imm32.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreEmbeddedIDL>true</IgnoreEmbeddedIDL>
+      <MergedIDLBaseFileName />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)UIEngine.tlb</TypeLibraryName>
+      <HeaderFileName>UIEngine.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>UIEngine_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>UIEngine_p.c</ProxyFileName>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_ATL_ATTRIBUTES;FUNCTION_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>..\Output\Release\Common.lib;msimg32.lib;Imm32.lib;..\Output\Release\wke.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreEmbeddedIDL>true</IgnoreEmbeddedIDL>
+      <MergedIDLBaseFileName />
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\ThridParty\StbImage\stb_image.cpp" />
+    <ClCompile Include="3dDefine.cpp" />
+    <ClCompile Include="3dTransform.cpp" />
+    <ClCompile Include="CBitmapCache.cpp" />
+    <ClCompile Include="CCUI3DTransfrom.cpp" />
+    <ClCompile Include="CCUIAnimate.cpp" />
+    <ClCompile Include="CCUIBackBlur.cpp" />
+    <ClCompile Include="CCUIBase.cpp" />
+    <ClCompile Include="CCUIBrush.cpp" />
+    <ClCompile Include="CCUIButton.cpp" />
+    <ClCompile Include="CCUICanvas.cpp" />
+    <ClCompile Include="CCUICaret.cpp" />
+    <ClCompile Include="CCUIControl.cpp" />
+    <ClCompile Include="CCUIElement.cpp" />
+    <ClCompile Include="CCUIFactory.cpp" />
+    <ClCompile Include="CCUIFont.cpp" />
+    <ClCompile Include="CCUIFrame.cpp" />
+    <ClCompile Include="CCUIGdiplus.cpp" />
+    <ClCompile Include="CCUIHittest.cpp" />
+    <ClCompile Include="CCUILayoutDock.cpp" />
+    <ClCompile Include="CCUILayoutHorizontal.cpp" />
+    <ClCompile Include="CCUILayoutMenu.cpp" />
+    <ClCompile Include="CCUILayoutVertical.cpp" />
+    <ClCompile Include="CCUIList.cpp" />
+    <ClCompile Include="CCUIListItem.cpp" />
+    <ClCompile Include="CCUIQuad.cpp" />
+    <ClCompile Include="CCUIRender.cpp" />
+    <ClCompile Include="CCUIScroll.cpp" />
+    <ClCompile Include="CCUISplit.cpp" />
+    <ClCompile Include="CCUIStatic.cpp" />
+    <ClCompile Include="CCUIText.cpp" />
+    <ClCompile Include="CCUITextField.cpp" />
+    <ClCompile Include="CCUITexture.cpp" />
+    <ClCompile Include="CCUITooltips.cpp" />
+    <ClCompile Include="CCUIWebkit.cpp" />
+    <ClCompile Include="CCUIWebkitHost.cpp" />
+    <ClCompile Include="CCUIWin.cpp" />
+    <ClCompile Include="CSUIExtension.cpp" />
+    <ClCompile Include="CSUIExtWnd.cpp" />
+    <ClCompile Include="CSUIMsgLoop.cpp" />
+    <ClCompile Include="CSUITimer.cpp" />
+    <ClCompile Include="CSUIWinMgr.cpp" />
+    <ClCompile Include="CUIMemDC.cpp" />
+    <ClCompile Include="CUIWindowMsgRoute.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UIEngine.cpp" />
+    <ClCompile Include="UIEngineMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\ThridParty\StbImage\stb_image.h" />
+    <ClInclude Include="3dDefine.h" />
+    <ClInclude Include="3dFastTransform.h" />
+    <ClInclude Include="3dTransform.h" />
+    <ClInclude Include="CBitmapCache.h" />
+    <ClInclude Include="CCUI3DTransfrom.h" />
+    <ClInclude Include="CCUIAnimate.h" />
+    <ClInclude Include="CCUIBackBlur.h" />
+    <ClInclude Include="CCUIBase.h" />
+    <ClInclude Include="CCUIBrush.h" />
+    <ClInclude Include="CCUIButton.h" />
+    <ClInclude Include="CCUICanvas.h" />
+    <ClInclude Include="CCUICaret.h" />
+    <ClInclude Include="CCUIControl.h" />
+    <ClInclude Include="CCUIElement.h" />
+    <ClInclude Include="CCUIFactory.h" />
+    <ClInclude Include="CCUIFont.h" />
+    <ClInclude Include="CCUIFrame.h" />
+    <ClInclude Include="CCUIGdiplus.h" />
+    <ClInclude Include="CCUIHittest.h" />
+    <ClInclude Include="CCUILayoutDock.h" />
+    <ClInclude Include="CCUILayoutHorizontal.h" />
+    <ClInclude Include="CCUILayoutMenu.h" />
+    <ClInclude Include="CCUILayoutVertical.h" />
+    <ClInclude Include="CCUIList.h" />
+    <ClInclude Include="CCUIListItem.h" />
+    <ClInclude Include="CCUIQuad.h" />
+    <ClInclude Include="CCUIQuadDef.h" />
+    <ClInclude Include="CCUIRender.h" />
+    <ClInclude Include="CCUIScroll.h" />
+    <ClInclude Include="CCUISplit.h" />
+    <ClInclude Include="CCUIStackBlurAlgorithm.h" />
+    <ClInclude Include="CCUIStatic.h" />
+    <ClInclude Include="CCUIText.h" />
+    <ClInclude Include="CCUITextField.h" />
+    <ClInclude Include="CCUITextFieldNode.h" />
+    <ClInclude Include="CCUITexture.h" />
+    <ClInclude Include="CCUITooltips.h" />
+    <ClInclude Include="CCUIWebkit.h" />
+    <ClInclude Include="CCUIWebkitDef.h" />
+    <ClInclude Include="CCUIWebkitHost.h" />
+    <ClInclude Include="CCUIWebkitInterface.h" />
+    <ClInclude Include="CCUIWin.h" />
+    <ClInclude Include="CSUIExtension.h" />
+    <ClInclude Include="CSUIExtensionDef.h" />
+    <ClInclude Include="CSUIExtWnd.h" />
+    <ClInclude Include="CSUIMsgLoop.h" />
+    <ClInclude Include="CSUITimer.h" />
+    <ClInclude Include="CSUIWinMgr.h" />
+    <ClInclude Include="CUIMemDC.h" />
+    <ClInclude Include="CUIWindowDef.h" />
+    <ClInclude Include="CUIWindowMsgRoute.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UIEngine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIEngine.rgs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
