@@ -77,6 +77,12 @@ FUNC_API int ModuleMain()
 	// IUIScroll
 	Common::Util::RegisterComponentString(_T("E386D85B-BF83-4bdc-9CFA-0916C4002F29"), _T("4CD999BB-1384-460f-8252-38C3B82A8CBA"), _T("UIEngine.dll")) ;
 	
+
+	// IUIListItem
+	Common::Util::RegisterComponentString(_T("34DB5513-25EC-416c-A328-36825A01F03E"), _T("31B0E4FF-BAA3-4268-93C1-05EE8CB54EEA"),  _T("UIEngine.dll")) ;
+	// IUIList
+	Common::Util::RegisterComponentString(_T("C76E86E6-3534-41f4-BBAB-54DFCF6A0FB8"), _T("B94F69D3-CB40-47fa-B6CD-83E132370197"),   _T("UIEngine.dll")) ;
+
 	return 0 ;
 }
 

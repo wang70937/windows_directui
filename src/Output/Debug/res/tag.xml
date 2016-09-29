@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Tags >
+	<Tag Name="Window" IID="C7A57F75-5780-454f-95DA-977F7C256B60" Node="node-win" />
+		
+  <Tag Name="Button" IID="42FB084C-7535-43B5-87DE-E6533C323A0B" Node="node-button" />
+  
+  <Tag Name="Static" IID="C0CCC861-A94C-498f-95C4-4ECA8C16F2EF" Node="node-label" />
+  
+  <Tag Name="BkgDraw" IID="9017C760-2EDB-42fb-AB7F-F44D10D6C605" Node="node-draw1" />
+  
+  <Tag Name="Texture" IID="674A3F15-17D1-4d06-B96D-0F11ED0E6670" Node="node-texture" />
+  
+  <Tag Name="Static" IID="C0CCC861-A94C-498f-95C4-4ECA8C16F2EF" Node="node-static" />
+  
+  <Tag Name="TextField" IID="DDB55AC5-C978-466c-B405-D242DCAC7B7F" Node="node-textfield" />
+  
+  <Tag Name="LayoutVertical" IID="9933F090-96AC-43bd-948D-984D1EB8A68C" Node="node-layoutvertical" />
+  
+  <Tag Name="LayoutHorizontal" IID="FFD71F3B-DD35-47aa-90F4-581BC3761D75" Node="node-layouthorizontal" />
+  
+  <Tag Name="Brush" IID="0A8F6858-743D-433B-AE72-D08ED19271A6" Node="node-brush" />
+  
+  <Tag Name="Control" IID="FFC6EA36-F6C6-4cdf-A24E-1AC035C66C97" Node="node-control" />
+  
+  <Tag Name="Frame" IID="051D90C7-E7AB-4ee1-A171-826CA957518A" Node="node-frame" />
+  
+  <Tag Name="Layout" IID="C20EECF0-B37D-4883-975F-3796B17ADC9E" Node="node-layout" />
+  
+  <Tag Name="Font" IID="2A179EB5-BEED-4582-9FA9-5CFCD150B4F3" Node="node-font" />
+  	
+</Tags>

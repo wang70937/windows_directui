@@ -559,10 +559,7 @@ HRESULT CCUIWin::HandleWinMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL*
 	WINDOW_KEYDOWN          (OnKeyDown,         wParam, lParam, bHandle)
 	WINDOW_DESTROY          (OnDestory,         wParam, lParam, bHandle)
 	WINDOW_MESSAGE_END      ()
-	//if (uMsg == WM_NCACTIVATE)
-	//{
-	//	bHandle = TRUE ;
-	//}
+
 
 	BOOL bHandleMsgRoute = this->m_pMessageRoute.DispatchMessage(uMsg, wParam, lParam) ;
 
@@ -581,6 +578,10 @@ HRESULT CCUIWin::HandleWinMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL*
 
 HRESULT CCUIWin::SetWinIcon(BOOL bBig, HICON hIcon)
 {
+	HWND hWnd ;
+	__self->GetHWnd(&hWnd);
+	SetIcon(hIcon, bBig);
+
 	return S_OK ;
 }
 
@@ -1154,13 +1155,13 @@ LRESULT CCUIWin::OnDestory(BOOL& bHandled)
 	{
 		this->m_pWinMgr->DelWindow(GetEntity<IUIWin>()) ;
 
-		/*INT nWindowCount = 0 ;
+		INT nWindowCount = 0 ;
 		this->m_pWinMgr->GetAllWindowsCount(&nWindowCount) ;
 		if (0 == nWindowCount && pMsgLoopService)
 		{
 			pMsgLoopService->QuitCurrentLoop() ;
 			::PostQuitMessage(0) ;
-		}*/
+		}
 	}
 	
 	return 0 ;

@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="Test"
 	ProjectGUID="{1CD77069-BC26-41B9-9B78-A31B9D9A7F54}"
+	RootNamespace="Test"
 	Keyword="AtlProj"
 	>
 	<Platforms>
@@ -60,6 +61,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
+				CallingConvention="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -109,7 +111,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Ö´ÐÐ×¢²á"
-				CommandLine="&quot;$(TargetPath)&quot; /RegServer"
+				CommandLine=""
 			/>
 		</Configuration>
 		<Configuration
@@ -206,7 +208,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="Ö´ÐÐ×¢²á"
-				CommandLine="&quot;$(TargetPath)&quot; /RegServer"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>
@@ -262,6 +264,10 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+			<File
+				RelativePath=".\Main.ico"
+				>
+			</File>
 			<File
 				RelativePath=".\Test.rc"
 				>

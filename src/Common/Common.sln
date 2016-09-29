@@ -1,13 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIEngine", "..\UIEngine\UIEngine.vcproj", "{30D23855-4210-4190-A1F3-06A5D8C845BE}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIEngine", "..\UIEngine\UIEngine.vcxproj", "{30D23855-4210-4190-A1F3-06A5D8C845BE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\Test\Test.vcproj", "{1CD77069-BC26-41B9-9B78-A31B9D9A7F54}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\Test\Test.vcxproj", "{1CD77069-BC26-41B9-9B78-A31B9D9A7F54}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcproj", "{37AE081C-7107-44DC-A24C-C35AE89F0877}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcxproj", "{37AE081C-7107-44DC-A24C-C35AE89F0877}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseMisc", "..\BaseMisc\BaseMisc.vcproj", "{81300F9A-82F8-4E9A-8F9D-10947A2A0101}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseMisc", "..\BaseMisc\BaseMisc.vcxproj", "{81300F9A-82F8-4E9A-8F9D-10947A2A0101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

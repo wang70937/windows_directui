@@ -61,6 +61,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
+				CallingConvention="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -78,7 +79,7 @@
 				Name="VCLinkerTool"
 				RegisterOutput="false"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="..\Output\Debug\Common.lib msimg32.lib Imm32.lib ..\Output\Debug\wke.lib rpcrt4.lib"
+				AdditionalDependencies="..\Output\Debug\Common.lib ..\Output\Debug\wke.lib msimg32.lib Imm32.lib rpcrt4.lib"
 				LinkIncremental="2"
 				IgnoreEmbeddedIDL="true"
 				MergedIDLBaseFileName=""

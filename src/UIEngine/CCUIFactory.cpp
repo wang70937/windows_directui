@@ -252,6 +252,10 @@ BOOL CCUIFactory::_parse_attribute(ICVarData* pXmlData, ICVarData* pOutAttr)
 		_pChildData->GetVarArray(CComBSTR(XML::XML_CHILDREN), &_pAttrChildrenArray) ;
 		IF_CONTINUE(NULL == _pAttrChildrenArray) ;
 
+		//test****
+		LONG nCount = 0;
+		_pAttrChildrenArray->GetArrayCount(&nCount);
+
 		CComPtr<ICVarData> _pAttrData ;
 		_pAttrChildrenArray->GetVarData(0, &_pAttrData) ;
 		IF_CONTINUE(NULL == _pAttrData) ;

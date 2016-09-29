@@ -27,13 +27,13 @@ HRESULT CSUIExtWnd::OnInit()
 {
 	WNDCLASSEX wc       = {sizeof(WNDCLASSEX)} ;
 	wc.hInstance        = ::GetModuleHandle(NULL) ;
-	wc.lpszClassName    = _T("{UB_UI_TIMER}") ;
+	wc.lpszClassName    = _T("GUIFoundation") ;
 	wc.lpfnWndProc      = &_extwnd_wnd_porc ;
 	wc.hbrBackground    = (HBRUSH)::GetStockObject(WHITE_BRUSH) ;
 
-	::RegisterClassEx(&wc) ;
-	this->m_hExtWnd = ::CreateWindowEx(0, wc.lpszClassName, 
-		_T("{E44DC2CD-8E70-4a09-800E-902D3FABD3F9}"),
+	ATOM atom = ::RegisterClassEx(&wc) ;
+	this->m_hExtWnd = ::CreateWindowEx(0, (LPCTSTR)atom,_T("GUIFoundation"),
+		//_T("{E44DC2CD-8E70-4a09-800E-902D3FABD3F9}"),
 		WS_OVERLAPPED, 0, 0, 1, 1, HWND_MESSAGE, NULL, wc.hInstance, NULL) ;
 	::ShowWindow(this->m_hExtWnd, SW_HIDE) ;
 

@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CSTaskHostAgent.h"
+#include <processthreadsapi.h>
 
 CSTaskHostAgent::CSTaskHostAgent()
 {

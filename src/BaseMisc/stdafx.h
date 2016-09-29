@@ -11,11 +11,11 @@
 // 如果必须将位于下面指定平台之前的平台作为目标，请修改下列定义。
 // 有关不同平台对应值的最新信息，请参考 MSDN。
 #ifndef WINVER				// 允许使用特定于 Windows XP 或更高版本的功能。
-#define WINVER 0x0501		// 将此值更改为相应的值，以适用于 Windows 的其他版本。
+#define WINVER 0x0502		// 将此值更改为相应的值，以适用于 Windows 的其他版本。
 #endif
 
 #ifndef _WIN32_WINNT		// 允许使用特定于 Windows XP 或更高版本的功能。
-#define _WIN32_WINNT 0x0501	// 将此值更改为相应的值，以适用于 Windows 的其他版本。
+#define _WIN32_WINNT 0x0502	// 将此值更改为相应的值，以适用于 Windows 的其他版本。
 #endif						
 
 #ifndef _WIN32_WINDOWS		// 允许使用特定于 Windows 98 或更高版本的功能。

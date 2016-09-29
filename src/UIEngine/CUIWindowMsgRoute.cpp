@@ -53,7 +53,7 @@ BOOL CUIMsgRoute::DispatchMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
     case WM_NCRBUTTONUP:
         return this->DispatchBtnMessage (wParam, lParam, FALSE, FALSE, TRUE, uMsg) ;
     case WM_NCMOUSEMOVE:
-        return this->DispatchMousgeMove  (wParam, lParam, TRUE, uMsg) ;
+        return this->DispatchMouseMove  (wParam, lParam, TRUE, uMsg) ;
     case WM_LBUTTONDBLCLK:
         return this->DispatchDBClick    (wParam, lParam, FALSE, uMsg) ;
     case WM_NCLBUTTONDBLCLK:

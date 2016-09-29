@@ -3,7 +3,7 @@
 
 CCUIWebkit::CCUIWebkit():m_pTimeCallbackPtr(this)
 {
-	
+	this->m_pWebkit = NULL;
 	this->m_pTimeCallbackPtr->Hook_OnTimer(&CCUIWebkit::OnTimer) ;
 }
 
@@ -18,10 +18,10 @@ HRESULT CCUIWebkit::FinalConstruct()
 	wkeInit() ;
 	this->m_pWebkit = wkeCreateWebView() ;
 	this->m_pWebkit->setCookieEnabled(TRUE) ;
-	this->m_pWebkit->setEditable(FALSE) ;
+//	this->m_pWebkit->setEditable(FALSE) ;
 	this->m_pWebkit->setTransparent(true) ;
-	this->m_pWebkit->setBufHandler(this) ;
-	//this->m_pWebkit->tick() ;
+//	this->m_pWebkit->setBufHandler(this) ;
+	this->m_pWebkit->tick() ;
 
 	Common::Util::GetService(&m_pTimer) ;
 	this->m_pTimer->SetInterval(this->m_pTimeCallbackPtr, 50, 1) ;
@@ -104,6 +104,7 @@ HRESULT CCUIWebkit::OnMessage(IUIFrame* pTarget, tMsgArg* pArg)
 
 		int delta = GET_WHEEL_DELTA_WPARAM(pArg->wParam) ;
 		this->m_pWebkit->mouseWheel(x, y, delta, flags) ;
+		this->Invalidate();
 	}
 	else if (MESSAGE::UI_MOUSEENTER == pArg->dwMsgId || MESSAGE::UI_MOUSELEAVE == pArg->dwMsgId)
 	{
@@ -142,6 +143,7 @@ HRESULT CCUIWebkit::OnMessage(IUIFrame* pTarget, tMsgArg* pArg)
 		if (pArg->wParam & MK_RBUTTON)	flags |= WKE_RBUTTON ;
 
 		this->m_pWebkit->mouseEvent(WM_LBUTTONDOWN, x, y, flags) ;
+		this->Invalidate();
 	}
 	else if (MESSAGE::UI_LBTNUP == pArg->dwMsgId)
 	{
@@ -156,6 +158,7 @@ HRESULT CCUIWebkit::OnMessage(IUIFrame* pTarget, tMsgArg* pArg)
 		if (pArg->wParam & MK_RBUTTON)	flags |= WKE_RBUTTON ;
 
 		this->m_pWebkit->mouseEvent(WM_LBUTTONUP, x, y, flags);
+		this->Invalidate();
 	}
 	else if (MESSAGE::UI_MOUSEMOVE == pArg->dwMsgId)
 	{
@@ -225,7 +228,7 @@ HRESULT CCUIWebkit::OnMessage(IUIFrame* pTarget, tMsgArg* pArg)
 	
 	if (MESSAGE::UI_CURSOR == pArg->dwMsgId)
 	{
-		return S_OK ;
+//		return S_OK ;
 	}
 
 	return __super::OnMessage(pTarget, pArg) ;

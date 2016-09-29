@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Root>
+	
+	
+
+	<Window  Name="main_win" WinSize="800,600" Node="Main"  LayerWin="False"  WindowBorder="2,2,2,2" padding="1,1,1,1" TopMost="False" DoubleBuffer="True">
+		
+			<Attribute >
+		 			<BkgDraw>
+		 				<Texture File="./pic/bk.png" DrawType="STRETCH" />
+		 			</BkgDraw>
+		 			
+		 			<Layout>
+		 				<LayoutVertical  FillItemIndex="0" />
+		 			</Layout>
+			
+		 		</Attribute>
+					
+		 <!-- 标题栏 -->
+		 <Frame  Size="0,30" Anchor="TOP" WidthAsParent="True"  Margin="1,1,1,1" Hittest="2" >
+		 
+		 		<Attribute >
+		 			<BkgDraw>
+		 				<Brush Color="241,246,249" BrushType="RECT_FILL" />
+		 			</BkgDraw>
+		 			
+		 			<Layout>
+		 				<LayoutVertical Orientation="0" FillItemIndex="1" />
+		 			</Layout>
+		 			
+		 		</Attribute>
+		 		
+		 		<!-- 标题 -->
+		 		<Static Name="static1"  Location="20,5" Anchor="TOP_LEFT"  Size="103,20" Margin="10,5,0,5" Float="True" Text="" MutiLine="False" TextColor="15,15,15" >
+						<Attribute >
+						<BkgDraw>
+							<!--Brush Color="255,60,100" BrushType="RECT_FILL"/>
+							<Font Italic="True" Underline="True" DrawType="0"/-->
+							<Texture File="./image/main/logo.png" DrawType="GRID" />
+						</BkgDraw>
+					</Attribute>
+				</Static>
+				
+				<!-- Min Button -->
+				<Button Name="BtnMin" Anchor="TOP_RIGHT"  Size="38,25" Margin="0,0,38,0" Float="True" ZOrder="0">
+					<Attribute >
+						<NormalBkgDraw>
+							<Texture  File="./pic/btn_min.png" DrawType="GRID" />
+						</NormalBkgDraw>
+						
+						<HighlightBkgDraw>
+							<Texture  File="./pic/btn_min_hover.png" DrawType="GRID" />
+						</HighlightBkgDraw>
+						
+						<PushedBkgDraw>
+							<Texture  File="./pic/btn_min_press.png" DrawType="GRID" />
+						</PushedBkgDraw>
+						
+						<DisableBkgDraw>
+							<Texture  File="./pic/btn_min.png" DrawType="GRID" />
+						</DisableBkgDraw>
+					</Attribute>
+				</Button>
+
+				<!-- Close Button -->
+				<Button Name="BtnClose" Anchor="TOP_RIGHT"  Size="38,25" Margin="0,0,5,0" Float="True" ZOrder="1">
+					<Attribute >
+						<NormalBkgDraw>
+							<Texture  File="./pic/btn_close.png" DrawType="GRID" />
+						</NormalBkgDraw>
+						
+						<HighlightBkgDraw>
+							<Texture  File="./pic/btn_close_hover.png" DrawType="GRID" />
+						</HighlightBkgDraw>
+						
+						<PushedBkgDraw>
+							<Texture  File="./pic/btn_close_press.png" DrawType="GRID" />
+						</PushedBkgDraw>
+						
+						<DisableBkgDraw>
+							<Texture  File="./pic/btn_close.png" DrawType="GRID" />
+						</DisableBkgDraw>
+					</Attribute>
+				</Button>
+				
+				<!-- static icon -->
+		 		<Static   Anchor="TOP_RIGHT"  Size="16,16" Margin="0,7,180,0" Float="True" ZOrder="2" >
+						<Attribute >
+						<BkgDraw>
+							<Texture File="./image/main/mzsm-icon.bmp" DrawType="GRID" DrawRect="0,0,16,16" />
+						</BkgDraw>
+					</Attribute>
+				</Static>
+				
+				<!-- static link -->
+		 		<Static   Anchor="TOP_RIGHT"  Size="70,20" Margin="0,5,0,0" Float="True" Text="免责声明" MutiLine="False" TextColor="0,0,0" ZOrder="3" >
+						<Attribute >
+						<BkgDraw>
+							<Font Color="0,0,0" DrawType="DRAW_DEFAULT"/>
+						</BkgDraw>
+					</Attribute>
+				</Static>
+				
+				
+				<TextField Name="textfield1" Location="210,3" Size="100,300" Text="edit content" MutiLine="True" TextColor="15,80,200" >
+					
+				</TextField>
+		
+		</Frame>
+		
+		
+		<!-- Body -->
+		<Frame Size="0,0" Anchor="CENTER"   HeightAsParent="True" WidthAsParent="True" HeightAsParent="False" Margin="1,1,1,1" Hittest="2" ZOrder="4" >
+		 
+		 		<Attribute >
+		 			<BkgDraw>
+		 				<Brush Color="200,0,0" BrushType="RECT_BORDER" />
+		 			</BkgDraw>
+		 			
+		 			<Layout>
+		 				<LayoutVertical Orientation="0" FillItemIndex="2" />
+		 			</Layout>
+			
+		 		</Attribute>
+		 		
+		</Frame>
+		
+		<!-- bottom -->
+		<Frame Size="0,50" Anchor="BOTTOM" HeigthAsParent="False"  WidthAsParent="True" Margin="1,1,1,1" Float="True" ZOrder="6"  >
+				<Attribute >
+		 			<BkgDraw>
+		 				<Brush Color="0, 100,0" BrushType="RECT_BORDER" />
+		 			</BkgDraw>
+		 			
+		 			<Layout>
+		 				<LayoutVertical Orientation="0" FillItemIndex="3" />
+		 			</Layout>
+			
+		 		</Attribute>
+	  </Frame>
+	  
+	 
+	
+	</Window>
+	
+
+
+</Root>

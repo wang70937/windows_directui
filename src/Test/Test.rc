@@ -1,44 +1,54 @@
-//Microsoft Visual C++ 生成的资源脚本。
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
 //
-// 从 TEXTINCLUDE 2 资源生成。
+// Generated from the TEXTINCLUDE 2 resource.
 //
 #include "winres.h"
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-LANGUAGE 4, 2
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 #pragma code_page(936)
+#endif //_WIN32
+
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE  
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE  
+2 TEXTINCLUDE 
 BEGIN
     "#include ""winres.h""\r\n"
     "\0"
 END
 
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+END
 
 #endif    // APSTUDIO_INVOKED
 
-#ifndef _MAC
+
 /////////////////////////////////////////////////////////////////////////////
 //
-// 版本
+// Version
 //
 
 VS_VERSION_INFO VERSIONINFO
@@ -66,34 +76,53 @@ BEGIN
             VALUE "OriginalFilename", "Test.exe"
             VALUE "ProductName", "TODO: <产品名>"
             VALUE "ProductVersion", "1.0.0.1"
-            VALUE "OLESelfRegister", ""
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-		VALUE "Translation", 0x0804, 936
+        VALUE "Translation", 0x804, 936
     END
 END
 
-#endif    // !_MAC
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// 字符串表
+// REGISTRY
 //
 
-STRINGTABLE  
+IDR_TEST                REGISTRY                "Test.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_MAIN           ICON                    "Main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
 BEGIN
-	IDS_PROJNAME					"Test"
+    IDS_PROJNAME            "Test"
 END
 
-IDR_TEST REGISTRY "Test.rgs"
-////////////////////////////////////////////////////////////////////////////
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
 
 
-#endif
 
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
-#endif    // 不是 APSTUDIO_INVOKED
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
 

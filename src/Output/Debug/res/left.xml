@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Node>
+
+		 
+		 		<Attribute >
+		 			<BkgDraw>
+		 				<Brush Color="0,0,0" BrushType="RECT_FILL" />
+		 			</BkgDraw>
+			
+		 		</Attribute>
+		 		
+
+</Node>
